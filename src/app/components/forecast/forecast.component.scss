@@ -9,6 +9,18 @@
     flex-wrap: wrap;
   }
 
+  &__error {
+    color: #f00;
+    text-align: center;
+  }
+
+  &__city {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 36px;
+    color: #fff;
+  }
+
   &__day {
     background-color: #143A52;
     box-shadow: 0px 0px 30px 0px rgb(0, 0, 0);

@@ -13,8 +13,6 @@ export class CurrentComponent implements OnInit {
   myWeather: CurrentWeather;
   location: any;
   dataFromApi: boolean;
-  boolen: boolean = true;
-
 
   constructor(private weatherService: WeatherService) { }
 
@@ -44,7 +42,6 @@ export class CurrentComponent implements OnInit {
     })
   }
 
-
   onSubmit(weatherForm: NgForm) {
     this.weatherService.anotherCity(weatherForm.value.city).subscribe((data: any) => {
       this.myWeather = new CurrentWeather(
@@ -60,8 +57,6 @@ export class CurrentComponent implements OnInit {
         data.wind.speed)
     })
   }
-
-
 }
 
 

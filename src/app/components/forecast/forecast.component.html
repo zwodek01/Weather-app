@@ -1,8 +1,10 @@
 <section class="forecast">
   <form class="forecast__form" [formGroup]="forecastForm" (ngSubmit)="onSubmit()" class="forecast__form">
-    <input class="forecast__input" type="text" formControlName="forecastCity">
-    <button class="forecast__button">SHOW</button>
+    <input class="forecast__input" type="text" formControlName="forecastCity" placeholder="City">
+    <button [disabled]="loading" class="forecast__button">SHOW</button>
   </form>
+  <p class="forecast__city">{{cityName}}</p>
+  <p class="forecast__error">{{error}}</p>
   <div class="forecast__container">
     <article class="forecast__day" *ngFor="let day of cityForecast">
       <p class="forecast__text">{{day.day | date: 'dd MMMM'}}</p>
