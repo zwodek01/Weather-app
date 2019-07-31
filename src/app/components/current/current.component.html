@@ -1,21 +1,20 @@
 <div *ngIf="!dataFromApi" class="loading"></div>
 <section class="current" *ngIf="dataFromApi">
-    <div class="current__container">
-        <p class="current__text">{{myWeather.cityName}} {{myWeather.country}}</p>
-
-        <p class="current__text">{{myWeather.temp}} &deg;</p>
-        <div class="current__image">
-            <img src="http://openweathermap.org/img/wn/{{myWeather.icon}}@2x.png">
-        </div>
-        <p class="current__text">{{myWeather.weatherKind}}</p>
-        <p class="current__text">Max: {{myWeather.tempMax}} &deg;</p>
-        <p class="current__text">Min: {{myWeather.tempMin}}&deg;</p>
-        <p class="current__text">Humidity: {{myWeather.humidity}} %</p>
-        <p class="current__text">Pressure: {{myWeather.pressure}} hPa</p>
-        <p class="current__text">Wind: {{myWeather.wind}} km/h</p>
-        <form (ngSubmit)="onSubmit(form)" #form="ngForm">
-            <input type="text" ngModel name="city" placeholder="City">
-            <button>OK</button>
-        </form>
+  <div class="current__container">
+    <p class="current__text">{{myWeather.cityName}} {{myWeather.country}}</p>
+    <p class="current__text">{{myWeather.temp}} &deg;</p>
+    <div class="current__image">
+      <img src="../../../assets/{{myWeather.icon}}.svg">
     </div>
+    <p class="current__text">{{myWeather.weatherKind}}</p>
+    <p class="current__text">Max: {{myWeather.tempMax}} &deg;</p>
+    <p class="current__text">Min: {{myWeather.tempMin}}&deg;</p>
+    <p class="current__text">Humidity: {{myWeather.humidity}} %</p>
+    <p class="current__text">Pressure: {{myWeather.pressure}} hPa</p>
+    <p class="current__text">Wind: {{myWeather.wind}} km/h</p>
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+      <input type="text" ngModel name="city" placeholder="City">
+      <button>OK</button>
+    </form>
+  </div>
 </section>

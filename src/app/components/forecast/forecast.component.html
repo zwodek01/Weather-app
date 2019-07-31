@@ -1,18 +1,19 @@
 <section class="forecast">
-    <form [formGroup]="forecastForm" (ngSubmit)="onSubmit()" class="forecast__form">
-        <input type="text" formControlName="forecastCity">
-        <button>OK</button>
-    </form>
-    <div class="forecast__container">
-        <article class="forecast__day" *ngFor="let day of cityForecast">
-            <p class="forecast__text">{{day.day | date: 'dd MMMM'}}</p>
-            <div class="forecast__icon">
-                <img src="http://openweathermap.org/img/wn/{{day.icon}}@2x.png">
-            </div>
-            <div class="forecast__temp">
-                <p class="forecast__text">{{day.tempMax}} &deg;</p>
-                <p class="forecast__text">{{day.tempMin}} &deg;</p>
-            </div>
-        </article>
-    </div>
+  <form [formGroup]="forecastForm" (ngSubmit)="onSubmit()" class="forecast__form">
+    <input type="text" formControlName="forecastCity">
+    <button>OK</button>
+  </form>
+  <div class="forecast__container">
+    <article class="forecast__day" *ngFor="let day of cityForecast">
+      <p class="forecast__text">{{day.day | date: 'dd MMMM'}}</p>
+      <div class="forecast__icon">
+        <img src="../../../assets/{{day.icon}}.svg">
+      </div>
+      <p class="forecast__text">{{day.description}}</p>
+      <div class="forecast__temp">
+        <p class="forecast__text">{{day.tempMax}} &deg;</p>
+        <p class="forecast__text">{{day.tempMin}} &deg;</p>
+      </div>
+    </article>
+  </div>
 </section>

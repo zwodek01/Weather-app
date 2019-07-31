@@ -13,10 +13,13 @@ export class CurrentComponent implements OnInit {
   myWeather: CurrentWeather;
   location: any;
   dataFromApi: boolean;
+  boolen: boolean = true;
+
 
   constructor(private weatherService: WeatherService) { }
 
   ngOnInit() {
+
     this.myWeather = this.weatherService.weatherNow();
     navigator.geolocation.getCurrentPosition((pos) => {
       this.location = pos.coords;
