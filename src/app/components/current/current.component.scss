@@ -1,24 +1,108 @@
-.loading {
-    display: inline-block;
+.current {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, #143A52, #424D79, #1F7885);
+  min-height: calc(100vh - 50px);
+
+  &__container {
+    background-color: #143A52;
+    box-shadow: 0px 0px 30px 0px rgb(0, 0, 0);
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px;
+    color: #fff;
+
+    @media (max-height: 520px) {
+      display: flex;
+      padding: 10px;
+      align-items: center;
+    }
+
+    @media(min-width: 768px) {
+      font-size: 20px;
+    }
+  }
+
+  &__title {
+    font-size: 26px;
+    margin-bottom: 30px;
+
+    @media(min-width: 768px) {
+      font-size: 30px;
+    }
+  }
+
+  &__temp {
+    font-size: 36px;
+  }
+
+  &__image {
     width: 100px;
-    height: 100px;
-    border: 3px solid rgba(95, 120, 145, .2);
-    border-radius: 50%;
-    border-top-color: #5F7891;
-    animation: spin 1s ease-in-out infinite;
-    position: absolute;
-    top: 70px;
-    left: 160px;
   }
-  
-  @keyframes spin {
-    to {
-      transform: rotate(360deg);
-    }
+
+  &__text {
+    margin: 10px 0;
   }
-  
-  @-webkit-keyframes spin {
-    to {
-      transform: rotate(360deg);
-    }
+
+  &__input {
+    border-radius: 10px 0 0 10px;
+    border: none;
+    padding: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    width: 100px;
   }
+
+  &__button {
+    padding: 10px;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    background-color: #1F7885;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+  }
+
+  &__button:focus,
+  &__input:focus {
+    outline: none;
+  }
+}
+
+.spinner {
+  margin: 100px auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner>div {
+  width: 18px;
+  height: 18px;
+  background-color: #14a098;
+
+  border-radius: 100%;
+  display: inline-block;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  animation-delay: -0.16s;
+}
+
+@keyframes sk-bouncedelay {
+
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+
+  40% {
+    transform: scale(1.0);
+  }
+}

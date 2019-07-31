@@ -1,0 +1,52 @@
+.forecast {
+  flex-direction: column;
+  background: linear-gradient(to top, #143A52, #424D79, #1F7885);
+  min-height: calc(100vh - 50px);
+
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  &__day {
+    background-color: #143A52;
+    box-shadow: 0px 0px 30px 0px rgb(0, 0, 0);
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 50px;
+    width: 150px;
+    padding: 20px;
+  }
+
+  &__form {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__input {
+    border-radius: 10px 0 0 10px;
+    border: none;
+    padding: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    width: 100px;
+  }
+
+  &__button {
+    padding: 10px;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    background-color: #1F7885;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+  }
+
+  &__button:focus,
+  &__input:focus {
+    outline: none;
+  }
+}

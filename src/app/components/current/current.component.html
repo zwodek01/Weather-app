@@ -1,20 +1,30 @@
-<div *ngIf="!dataFromApi" class="loading"></div>
-<section class="current" *ngIf="dataFromApi">
-  <div class="current__container">
-    <p class="current__text">{{myWeather.cityName}} {{myWeather.country}}</p>
-    <p class="current__text">{{myWeather.temp}} &deg;</p>
-    <div class="current__image">
-      <img src="../../../assets/{{myWeather.icon}}.svg">
+<section class="current">
+  <div *ngIf="!dataFromApi" class="spinner">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+  </div>
+  <div *ngIf="dataFromApi" class="current__container">
+    <div class="current__wrapper">
+      <p class="current__title">{{myWeather.cityName}} {{myWeather.country}}</p>
+      <p class="current__temp">{{myWeather.temp}} &deg;</p>
+      <img class="current__image" src="../../../assets/{{myWeather.icon}}.svg">
     </div>
-    <p class="current__text">{{myWeather.weatherKind}}</p>
-    <p class="current__text">Max: {{myWeather.tempMax}} &deg;</p>
-    <p class="current__text">Min: {{myWeather.tempMin}}&deg;</p>
-    <p class="current__text">Humidity: {{myWeather.humidity}} %</p>
-    <p class="current__text">Pressure: {{myWeather.pressure}} hPa</p>
-    <p class="current__text">Wind: {{myWeather.wind}} km/h</p>
-    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
-      <input type="text" ngModel name="city" placeholder="City">
-      <button>OK</button>
-    </form>
+    <div class="current__wrapper">
+
+      <p class="current__text">{{myWeather.weatherKind}}</p>
+      <p class="current__text">Max: {{myWeather.tempMax}} &deg;</p>
+      <p class="current__text">Min: {{myWeather.tempMin}}&deg;</p>
+      <p class="current__text">Humidity: {{myWeather.humidity}} %</p>
+      <p class="current__text">Pressure: {{myWeather.pressure}} hPa</p>
+      <p class="current__text">Wind: {{myWeather.wind}} km/h</p>
+    </div>
+    <div class="current__wrapper">
+      <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+        <input class="current__input" type="text" ngModel name="city" placeholder="City">
+        <button class="current__button">Show</button>
+      </form>
+    </div>
+
   </div>
 </section>

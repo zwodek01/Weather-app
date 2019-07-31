@@ -1,7 +1,7 @@
 <section class="forecast">
-  <form [formGroup]="forecastForm" (ngSubmit)="onSubmit()" class="forecast__form">
-    <input type="text" formControlName="forecastCity">
-    <button>OK</button>
+  <form class="forecast__form" [formGroup]="forecastForm" (ngSubmit)="onSubmit()" class="forecast__form">
+    <input class="forecast__input" type="text" formControlName="forecastCity">
+    <button class="forecast__button">SHOW</button>
   </form>
   <div class="forecast__container">
     <article class="forecast__day" *ngFor="let day of cityForecast">
