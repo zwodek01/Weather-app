@@ -37,7 +37,6 @@ export class ForecastComponent implements OnInit {
             data['list'][i].weather[0].description,
             data['list'][i].main.temp_max,
             data['list'][i].main.temp_min)
-          console.log(data)
           this.cityForecast.push(temp);
           sessionStorage.setItem('ArrayWeather', JSON.stringify(this.cityForecast));
         }
