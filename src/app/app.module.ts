@@ -11,9 +11,11 @@ import { CurrentComponent } from './components/current/current.component';
 import { ForecastComponent } from './components/forecast/forecast.component';
 
 const appRoutes: Routes = [
-  { path: 'current', component: CurrentComponent, data: { state: 'home' } },
-  { path: 'forecast', component: ForecastComponent, data: { state: 'about' } },
-  { path: '', redirectTo: 'current', pathMatch: 'full' }
+  { path: 'current', component: CurrentComponent },
+  { path: 'forecast', component: ForecastComponent },
+  { path: '', redirectTo: 'current', pathMatch: 'full' },
+  { path: 'current', redirectTo: 'current', pathMatch: 'full' },
+  { path: 'forecast', redirectTo: 'forecast', pathMatch: 'full' }
 ];
 
 @NgModule({
