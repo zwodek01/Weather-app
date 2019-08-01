@@ -1,4 +1,16 @@
-# WeatherApp
+# Weather-app
+
+A simple app to check the weather
+
+## Technologies
+Project is created with:
+-Angular 2+
+
+## Demo Live
+
+https://weather-app.pl/
+
+![Dashboard](Dashboard.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.3.
 
