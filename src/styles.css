@@ -130,3 +130,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+router-outlet~* {
+  position: absolute;
+  width: 100%;
+}
+
+body {
+  background: linear-gradient(to top, #143A52, #424D79, #1F7885);
+  min-height: 100vh;
+}

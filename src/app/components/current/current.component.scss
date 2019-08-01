@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to top, #143A52, #424D79, #1F7885);
   min-height: calc(100vh - 50px);
+  background: linear-gradient(to top, #143A52, #424D79, #1F7885);
 
   &__container {
     background-color: #143A52;
@@ -21,6 +21,7 @@
 
     @media(min-width: 768px) {
       font-size: 20px;
+      min-width: 300px;
     }
   }
 
@@ -30,6 +31,10 @@
 
     @media(min-width: 768px) {
       font-size: 30px;
+    }
+
+    @media (max-height: 520px) {
+      margin-bottom: 10px;
     }
   }
 
@@ -43,6 +48,10 @@
 
   &__text {
     margin: 10px 0;
+
+    @media(min-width: 768px) {
+      margin: 20px 0;
+    }
   }
 
   &__input {

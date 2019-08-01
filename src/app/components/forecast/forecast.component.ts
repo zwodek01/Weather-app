@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Forecast } from '../forecast/forecast'
 import { WeatherService } from '../services/weather.service';
+import { showHide } from '../../animations';
 
 @Component({
   selector: 'app-forecast',
   templateUrl: './forecast.component.html',
-  styleUrls: ['./forecast.component.scss']
+  styleUrls: ['./forecast.component.scss'],
+  animations: [showHide]
 })
 export class ForecastComponent implements OnInit {
   error: string;

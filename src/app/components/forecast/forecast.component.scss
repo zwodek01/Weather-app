@@ -1,7 +1,6 @@
 .forecast {
-  flex-direction: column;
-  background: linear-gradient(to top, #143A52, #424D79, #1F7885);
   min-height: calc(100vh - 50px);
+  background: linear-gradient(to top, #143A52, #424D79, #1F7885);
 
   &__container {
     display: flex;
@@ -19,7 +18,12 @@
     text-align: center;
     font-size: 36px;
     color: #fff;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
   }
+
 
   &__day {
     background-color: #143A52;
