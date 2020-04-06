@@ -4,13 +4,17 @@ A simple app to check the weather
 
 ## Technologies
 Project is created with:
--Angular 2+
+-Angular 8
 
 ## Demo Live
 
 https://weather-app.pl/
 
 ![Dashboard](Dashboard.png)
+
+## API
+
+https://openweathermap.org
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.3.
 
